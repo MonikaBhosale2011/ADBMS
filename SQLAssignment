@@ -63,7 +63,43 @@ WHERE first_name IN ("Vipul", "Satish");
 
 
 
--------------------------------------------------------------------------------------------------------------------
+Question 
+Consider the table Worker and print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
+Expected Output:
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKERID | FIRSTNAME | LASTNAME | SALARY | JOININGDATE | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+| 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
++-----------+------------+-----------+--------+---------------------+------------+
+
+
+question
+
+Consider the table Worker and print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
+
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKERID | FIRSTNAME | LASTNAME | SALARY | JOININGDATE | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+| 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
++-----------+------------+-----------+--------+---------------------+------------+
+SELECT * FROM worker WHERE first_name LIKE "_____h";
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 
+Write a Pl/SQL program to check number is even or odd.Consider the number 23.
+
+DECLARE 
+num NUMBER := 23;
+ reminder NUMBER;
+ BEGIN reminder := MOD(num, 2);
+ IF reminder = 0 THEN
+ dbms_output.Put_line('number is Even');
+ ELSE
+ dbms_output.Put_line('number is Odd');
+ END IF; 
+END;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
 Question 
 Write a Pl/SQL program to calculate factorial of 5.
 Expected output
@@ -81,4 +117,6 @@ BEGIN
   END LOOP;	
   DBMS_OUTPUT.PUT_LINE('FACTORIAL OF '||N|| ' IS '||FACTORIAL);
 END;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
