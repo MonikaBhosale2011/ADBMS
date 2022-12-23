@@ -18,6 +18,8 @@ Expected Output:
 | 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
 +-----------+------------+-----------+--------+---------------------+------------+
 
+Answer :
+
 select department, count(Worker_id) as num from Worker
 group by department
 order by num desc;
@@ -58,12 +60,24 @@ Expected Output:
 | 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
 +-----------+------------+-----------+--------+---------------------+------------+
 
+Answer
+
 SELECT * FROM Worker 
 WHERE first_name IN ("Vipul", "Satish");
 
+Output of this program 
+
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY |     JOINING_DATE    | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         6 |      Vipul |     Diwan | 200000 | 2014-06-11 09:00:00 |    Account |
+|         7 |     Satish |     Kumar |  75000 | 2014-01-20 09:00:00 |    Account |
++-----------+------------+-----------+--------+---------------------+------------+
 
 
-Question 
+
+Question :3
+
 Consider the table Worker and print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
 Expected Output:
 +-----------+------------+-----------+--------+---------------------+------------+
@@ -72,20 +86,18 @@ Expected Output:
 | 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
 +-----------+------------+-----------+--------+---------------------+------------+
 
+Answer 
+SELECT * FROM worker WHERE first_name LIKE "_____h";
 
-question
-
-Consider the table Worker and print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
-
+Output of this progam 
 +-----------+------------+-----------+--------+---------------------+------------+
 | WORKERID | FIRSTNAME | LASTNAME | SALARY | JOININGDATE | DEPARTMENT |
 +-----------+------------+-----------+--------+---------------------+------------+
 | 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
 +-----------+------------+-----------+--------+---------------------+------------+
-SELECT * FROM worker WHERE first_name LIKE "_____h";
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-Question 
+Question 4
 Write a Pl/SQL program to check number is even or odd.Consider the number 23.
 
 DECLARE 
@@ -100,7 +112,7 @@ num NUMBER := 23;
 END;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Question 
+Question 5
 Write a Pl/SQL program to calculate factorial of 5.
 Expected output
 120
