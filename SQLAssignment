@@ -18,6 +18,19 @@ Expected Output:
 | 7 | Satish | Kumar | 75000 | 2014-01-20 09:00:00 | Account |
 +-----------+------------+-----------+--------+---------------------+------------+
 
+select department, count(Worker_id) as num from Worker
+group by department
+order by num desc;
+
+Output of this program 
++------------+-----+
+| department | num |
++------------+-----+
+|      Admin |   4 |
+|         HR |   2 |
+|    Account |   2 |
++------------+-----+
+
 
 
 
@@ -47,4 +60,25 @@ Expected Output:
 
 SELECT * FROM Worker 
 WHERE first_name IN ("Vipul", "Satish");
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+Question 
+Write a Pl/SQL program to calculate factorial of 5.
+Expected output
+120
+
+DECLARE
+	N NUMBER:=5;
+	FACTORIAL NUMBER:=1;
+	I NUMBER;
+BEGIN
+ 
+  FOR I in 1..N
+  LOOP 
+	FACTORIAL:=FACTORIAL*I;
+  END LOOP;	
+  DBMS_OUTPUT.PUT_LINE('FACTORIAL OF '||N|| ' IS '||FACTORIAL);
+END;
 
